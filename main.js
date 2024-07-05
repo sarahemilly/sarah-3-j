@@ -7,28 +7,30 @@ const tempoObjetivo2 = new Date(8);
 const tempoObjetivo3 = new Date(2006);
 const tempoObjetivo4 = new Date(10);
 const tempoObjetivo5 = new Date(5);
-const agora = new Date();
-tempo[0].textContent = tempoObjetivo1-agora
-tempo[1].textContent = tempoObjetivo1
+
+function calculaTempo(tempoObjetivo){ 
+const agora = new Date()
 let segundos;
 let minutos;
 let horas;
 let dias;
-segundos= (tempoObjetivo1-agora)/1000
-minutos= segundos/60
-horas= minutos/60
-dias= horas/24
-segundos = Math.floor(segundos);
-minutos = Math.floor(minutos);
-horas = Math.floor(horas);
-dias = Math.floor(dias);
+segundos = Math.floor((tempoObjetivo-agora)/1000);
+minutos = Math.floor(segundos/60);
+horas = Math.floor(minutos/60);
+dias = Math.floor(horas/24);
 
 segundos = segundos%60
 minutos = minutos%60
 horas = horas%24
-tempo[0].textContent = `faltam ${dias} dias,${horas} horas,${minutos} minutos, ${segundos} segundos`
-segundos=Math.floor(segundos);
-console.log(botoes);
+  
+   return `Faltam ${dias} dias,${horas} horas,${minutos} minutos, ${segundos} segundo`
+}
+
+ tempo[0].textContent = calculaTempo(tempoObjetivo1);
+ tempo[1].textContent = calculaTempo(tempoObjetivo1);
+ tempo[2].textContent = calculaTempo(tempoObjetivo1);
+ tempo[3].textContent = calculaTempo(tempoObjetivo1);
+
 for(let i = 0; i < botoes.length ; i++){
     botoes[i].onclick = function() {
         for (j=0;j<botoes.length;j++){
