@@ -22,14 +22,17 @@ dias = Math.floor(horas/24);
 segundos = segundos%60
 minutos = minutos%60
 horas = horas%24
-  
-   return `Faltam ${dias} dias,${horas} horas,${minutos} minutos, ${segundos} segundo`
+  if(segundos >= 0){
+    return `Faltam ${dias} dias,${horas} horas,${minutos} minutos, ${segundos} segundo`
+  }else {
+   return 'Prazo Finalizado!'
+  }
 }
 
  tempo[0].textContent = calculaTempo(tempoObjetivo1);
- tempo[1].textContent = calculaTempo(tempoObjetivo1);
- tempo[2].textContent = calculaTempo(tempoObjetivo1);
- tempo[3].textContent = calculaTempo(tempoObjetivo1);
+ tempo[1].textContent = calculaTempo(tempoObjetivo2);
+ tempo[2].textContent = calculaTempo(tempoObjetivo3);
+ tempo[3].textContent = calculaTempo(tempoObjetivo4);
 
 for(let i = 0; i < botoes.length ; i++){
     botoes[i].onclick = function() {
