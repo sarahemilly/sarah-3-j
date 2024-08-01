@@ -1,10 +1,10 @@
 :root {
     --cor-de-fundo: #1e1e1e;
-    --verde: hsl(310, 98%, 50%);
+    --verde: #5FFF57;
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58,55,94,0.5);
-    --texto-fundo: rgba(58,55,94,0.3);
+    --botao-inativo: rgba(58,55,94,0,5);
+    --texto-fundo: rgba(58,55,94,0,3);
 }
 
 *{
@@ -16,7 +16,6 @@ body{
 span{
     color: var(--verde);
 }
-
 .conteudo-principal{
     display: flex;
     flex-direction: column;
@@ -59,7 +58,7 @@ span{
     border-radius:0 0 20px 20px;
 }
 
-.botao.ativo{
+.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 2px solid var(--verde);
 }
