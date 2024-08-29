@@ -30,12 +30,19 @@ minutos = minutos%60
 horas = horas%24
 
 if(segundos >= 0){
-    return `Faltam ${dias}dias,${horas}horas,${minutos}minutos e ${segundos}segundos`
+    return [dias,horas,minutos,segundos]
 }else{
-    return 'Prazo finalizado'
-}
+    return 'Prazo finalizado!'
+   }
 
 }
+
+const tempoUm = calculaTempo(tempoObjetivo1)
+const tempoDois = calculaTempo(tempoObjetivo2)
+const tempoTres = calculaTempo(tempoObjetivo3)
+const tempoQuatro = calculaTempo(tempoObjetivo4)
+ 
+console.log(tempoUm[3])
 
 tempo[0].textContent = calculaTempo(tempoObjetivo1);
 tempo[1].textContent = calculaTempo(tempoObjetivo2);
