@@ -3,8 +3,8 @@
     --verde: #5FFF57;
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58,55,94,0,5);
-    --texto-fundo: rgba(58,55,94,0,3);
+    --botao-inativo: rgba(58,55,94,0.5);
+    --texto-fundo: rgba(58,55,94,0.3);
 }
 
 *{
@@ -58,7 +58,7 @@ span{
     border-radius:0 0 20px 20px;
 }
 
-.ativo{
+.botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 2px solid var(--verde);
 }
