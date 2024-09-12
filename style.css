@@ -8,7 +8,7 @@ body{
 }
 
 :root{
-    --verde: #deff23;
+    --verde: #5FFF57;
     --cor-de-fundo: #1e1e1e;
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
@@ -64,13 +64,35 @@ span{
     border-bottom: 2px solid var(--verde);
 }
 
+.contador{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito{
+    padding: 0 16px;
+    margin: 0;
+}
+
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+}
+
 .aba-conteudo {
     display: none;
 }
 .aba-conteudo.ativo{
     display: block;
 }
-.abas-texto{
+.aba-texto{
     background-color: var(--botao-ativo);
     padding: 40px;
     border-radius: 15px;
